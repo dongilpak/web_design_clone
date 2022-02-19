@@ -8,6 +8,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import title from '../../assets/title.png';
 import HeaderNav from './HeaderNav';
+import MainNav from './MainNav';
 
 const Header = () => {
     const [barActive, setBarActive] = useState(false);
@@ -42,6 +43,8 @@ const Header = () => {
             ) : (
                 <HeaderNav active='inactive' />
             )}
+
+            <MainNav />
         </header>
     );
 };

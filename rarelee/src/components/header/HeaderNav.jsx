@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
 
 const HeaderNav = ({ active }) => {
-    console.log(active);
     const [onConsulting, setOnConsulting] = useState(false);
 
     const onClickTab = () => {

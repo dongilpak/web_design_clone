@@ -54,6 +54,10 @@
 
     // header nav
     .header-nav {
+        position: absolute;
+        width: 100%;
+        z-index: 99;
+        background-color: white;
         overflow: hidden;
         transition: all 0.4s;
         transform-origin: top;
@@ -94,6 +98,63 @@
 
                 ul > li > a {
                     font-size: 1.3rem;
+                }
+            }
+        }
+    }
+
+    .main-nav {
+        width: 100%;
+
+        > div {
+            max-width: 114rem;
+            margin: 0 auto;
+        }
+
+        &__box {
+            padding: 0.7rem;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            li {
+                a {
+                    font-size: 1.7rem;
+                    margin-right: 0.7rem;
+                    padding: 0.3rem 2rem;
+                    transition: 0.4s;
+                    &:hover {
+                        opacity: 0.5;
+                    }
+                }
+
+                ul {
+                    width: 100%;
+                    background-color: white;
+                    border-radius: 0.7rem;
+                    transition: all 0.4s;
+                    li {
+                        width: 100%;
+                        text-align: center;
+                        display: block;
+                        a {
+                            display: block;
+                            font-weight: 700;
+                            padding: 1.1rem 2.5rem;
+                            font-size: 1.4rem;
+                        }
+                    }
+                }
+
+                .enter {
+                    + ul {
+                        opacity: 1;
+                    }
+                }
+
+                .leave {
+                    + ul {
+                        opacity: 0;
+                    }
                 }
             }
         }

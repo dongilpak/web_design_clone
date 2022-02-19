@@ -358,3 +358,10 @@ template {
 [hidden] {
     display: none;
 }
+
+// ul, li, ol
+ul,
+li,
+ol {
+    list-style: none;
+}
