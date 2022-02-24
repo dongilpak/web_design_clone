@@ -18,11 +18,13 @@ const MainNav = () => {
                     <li>
                         <a href='/about-rarelee'>ABOUT RARELEE</a>
                     </li>
-                    <li
-                        onMouseEnter={handleMouseMove}
-                        onMouseLeave={handleMouseMove}
-                    >
-                        <a href='#' className={onMouse ? 'enter' : 'leave'}>
+                    <li>
+                        <a
+                            href='#'
+                            className={onMouse ? 'enter' : 'leave'}
+                            onMouseEnter={handleMouseMove}
+                            onMouseLeave={handleMouseMove}
+                        >
                             CONSULTING신청{' '}
                             <FontAwesomeIcon icon={faCaretDown} />
                         </a>

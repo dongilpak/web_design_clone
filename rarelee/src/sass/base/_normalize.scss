@@ -77,11 +77,13 @@ a {
     background-color: transparent;
     text-decoration: none;
     outline: none;
+    color: inherit;
 }
 
 a:hover,
 a:active,
-a:visited {
+a:visited,
+a:focus {
     text-decoration: none;
     color: #000;
 }
