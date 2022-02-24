@@ -9,12 +9,23 @@ import {
 import title from '../../assets/title.png';
 import HeaderNav from './HeaderNav';
 import MainNav from './MainNav';
+import Cart from './Cart';
 
 const Header = () => {
     const [barActive, setBarActive] = useState(false);
+    const [cartActive, setCartActive] = useState(false);
+    const [searchActive, setSearchActive] = useState(false);
 
     const handleHeaderNav = () => {
         barActive ? setBarActive(false) : setBarActive(true);
+    };
+
+    const handleCartVisible = () => {
+        cartActive ? setCartActive(false) : setCartActive(true);
+    };
+
+    const handleSearchVisible = () => {
+        searchActive ? setSearchActive(false) : setSearchActive(true);
     };
 
     return (
@@ -33,8 +44,25 @@ const Header = () => {
                     </a>
                 </h1>
                 <div className='header__gnb'>
-                    <FontAwesomeIcon icon={faShoppingCart} />
-                    <FontAwesomeIcon icon={faSearch} />
+                    <div className='header__gnb__cart'>
+                        <div className='cart__icon'>
+                            <FontAwesomeIcon
+                                icon={faShoppingCart}
+                                onClick={handleCartVisible}
+                            />
+                        </div>
+                        <div
+                            className={`cart ${cartActive ? 'show' : 'hidden'}`}
+                        >
+                            <Cart onClickCart={handleCartVisible} />
+                        </div>
+                    </div>
+                    <div className='header__gnb__search'>
+                        <div className='search__icon'>
+                            <FontAwesomeIcon icon={faSearch} />
+                        </div>
+                        <div></div>
+                    </div>
                 </div>
             </div>
 
