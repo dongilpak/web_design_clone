@@ -270,15 +270,15 @@
                     }
                 }
 
-                .enter {
-                    + ul {
+                &.enter {
+                    ul {
                         transform: scale(1);
                         opacity: 1;
                     }
                 }
 
-                .leave {
-                    + ul {
+                &.leave {
+                    ul {
                         height: 0;
                         opacity: 0;
                         transform: scale(0);
