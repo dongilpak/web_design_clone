@@ -119,6 +119,60 @@
                 font-size: 1.6rem;
                 cursor: pointer;
             }
+
+            .search {
+                width: 100%;
+                height: 100vh;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 998;
+                background-color: #000000;
+                opacity: 0.8;
+                padding: 0 15%;
+                transition: all 0.4s;
+
+                &.show {
+                    transform: scale(1);
+                }
+
+                &.hidden {
+                    transform: scale(0);
+                }
+
+                &__box {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                &__form {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .search__input {
+                        outline: none;
+                        border: 0;
+                        border-bottom: 1px solid #ffffff;
+                        background-color: transparent;
+                        text-align: center;
+                        width: 100%;
+                        font-size: 5rem;
+                        line-height: 1.5;
+                        color: #ffffff;
+                    }
+
+                    .search__close {
+                        position: absolute;
+                        right: 2rem;
+                        color: #ffffff;
+                        font-size: 2rem;
+                        cursor: pointer;
+                    }
+                }
+            }
         }
     }
     // header nav

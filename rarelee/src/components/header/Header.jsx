@@ -10,6 +10,7 @@ import title from '../../assets/title.png';
 import HeaderNav from './HeaderNav';
 import MainNav from './MainNav';
 import Cart from './Cart';
+import Search from './Search';
 
 const Header = () => {
     const [barActive, setBarActive] = useState(false);
@@ -59,9 +60,21 @@ const Header = () => {
                     </div>
                     <div className='header__gnb__search'>
                         <div className='search__icon'>
-                            <FontAwesomeIcon icon={faSearch} />
+                            <FontAwesomeIcon
+                                icon={faSearch}
+                                onClick={handleSearchVisible}
+                            />
                         </div>
-                        <div></div>
+                        <div
+                            className={`search ${
+                                searchActive ? 'show' : 'hidden'
+                            }`}
+                        >
+                            <Search
+                                searchActive
+                                onClickSearch={handleSearchVisible}
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
