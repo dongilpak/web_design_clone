@@ -32,48 +32,52 @@ const Header = () => {
     return (
         <header className='header'>
             <div className='header__container'>
-                <div className='header__nav' onClick={handleHeaderNav}>
-                    {barActive ? (
-                        <FontAwesomeIcon icon={faTimes} />
-                    ) : (
-                        <FontAwesomeIcon icon={faBars} />
-                    )}
-                </div>
-                <h1 className='header__title'>
-                    <a href='/'>
-                        <img src={title} alt='title' />
-                    </a>
-                </h1>
-                <div className='header__gnb'>
-                    <div className='header__gnb__cart'>
-                        <div className='cart__icon'>
-                            <FontAwesomeIcon
-                                icon={faShoppingCart}
-                                onClick={handleCartVisible}
-                            />
-                        </div>
-                        <div
-                            className={`cart ${cartActive ? 'show' : 'hidden'}`}
-                        >
-                            <Cart onClickCart={handleCartVisible} />
-                        </div>
+                <div className='header__box'>
+                    <div className='header__nav' onClick={handleHeaderNav}>
+                        {barActive ? (
+                            <FontAwesomeIcon icon={faTimes} />
+                        ) : (
+                            <FontAwesomeIcon icon={faBars} />
+                        )}
                     </div>
-                    <div className='header__gnb__search'>
-                        <div className='search__icon'>
-                            <FontAwesomeIcon
-                                icon={faSearch}
-                                onClick={handleSearchVisible}
-                            />
+                    <h1 className='header__title'>
+                        <a href='/'>
+                            <img src={title} alt='title' />
+                        </a>
+                    </h1>
+                    <div className='header__gnb'>
+                        <div className='header__gnb__cart'>
+                            <div className='cart__icon'>
+                                <FontAwesomeIcon
+                                    icon={faShoppingCart}
+                                    onClick={handleCartVisible}
+                                />
+                            </div>
+                            <div
+                                className={`cart ${
+                                    cartActive ? 'show' : 'hidden'
+                                }`}
+                            >
+                                <Cart onClickCart={handleCartVisible} />
+                            </div>
                         </div>
-                        <div
-                            className={`search ${
-                                searchActive ? 'show' : 'hidden'
-                            }`}
-                        >
-                            <Search
-                                searchActive
-                                onClickSearch={handleSearchVisible}
-                            />
+                        <div className='header__gnb__search'>
+                            <div className='search__icon'>
+                                <FontAwesomeIcon
+                                    icon={faSearch}
+                                    onClick={handleSearchVisible}
+                                />
+                            </div>
+                            <div
+                                className={`search ${
+                                    searchActive ? 'show' : 'hidden'
+                                }`}
+                            >
+                                <Search
+                                    searchActive
+                                    onClickSearch={handleSearchVisible}
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
